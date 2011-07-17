@@ -12,5 +12,5 @@ set expandtab
 syntax on
 
 colorscheme solarized
-set background=dark
-set listchars=tab:▸\ ,eol:¬
+set background=light
+"set listchars=tab:▸\ ,eol:¬
