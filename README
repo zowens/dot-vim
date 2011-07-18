@@ -2,7 +2,7 @@ DOT VIM SETTINGS
 
 CLONING
 
-> git clone https://zowens@github.com/zowens/dot-vim.git ~/.vim
+> git clone http://github.com/zowens/dot-vim.git ~/.vim
 > cd ~/.vim
 > ./install.sh
 > ./update.sh
