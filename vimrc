@@ -24,3 +24,7 @@ set backspace=indent,eol,start
 
 set nowrap
 set softtabstop=4
+
+if has("autocmd")
+  filetype plugin indent on
+endif
