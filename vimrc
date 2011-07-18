@@ -13,4 +13,14 @@ syntax on
 
 colorscheme solarized
 set background=light
-"set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬
+set guifont=Monospace\ 11
+
+" exclusively use VIM settings (not VI settings)
+set nocompatible
+
+"allow backspacing
+set backspace=indent,eol,start
+
+set nowrap
+set softtabstop=4
