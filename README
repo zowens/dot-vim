@@ -1,8 +1,4 @@
 DOT VIM SETTINGS
 
 CLONING
-
-> git clone http://github.com/zowens/dot-vim.git ~/.vim
-> cd ~/.vim
-> ./install.sh
-> ./update.sh
+> curl https://raw.github.com/zowens/dot-vim/master/install.sh | sh
