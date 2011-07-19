@@ -16,4 +16,4 @@ ln -s ~/.vim/vimrc ~/.vimrc
 
 # update submodules
 cd ~/.vim
-git submodule update --init
+GIT_SSL_NO_VERIFY=true git submodule update --init
