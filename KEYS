@@ -1,0 +1,8 @@
+Various key mappings for quick reference
+
+
+\b - Buffer Explorer
+:nt - Opens Nerd Tree
+:a Switches from .h -> .c file or .c -> .h
+
+:Gcommit / :Gedit / :Gstatus / :Git ... - various git commands
