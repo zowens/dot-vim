@@ -45,3 +45,6 @@ cmap W w
 cmap WQ wq
 cmap wQ wq
 cmap Q q
+
+" turn off backup files
+set backup off
