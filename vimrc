@@ -48,3 +48,6 @@ cmap Q q
 
 " turn off backup files
 set nobackup
+
+" Making it so ; works like : for commands. Saves typing and eliminates :W style typos due to lazy holding shift.
+nnoremap ; :
