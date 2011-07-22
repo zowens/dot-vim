@@ -31,3 +31,17 @@ endif
 
 " command mapping from nt to NERDTree
 cmap nt NERDTree
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+
+" Easier moving in tabs and windows
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
+map <C-K> <C-W>k
+
+" Stupid shift key fixes
+cmap W w 						
+cmap WQ wq
+cmap wQ wq
+cmap Q q
