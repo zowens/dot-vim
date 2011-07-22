@@ -16,3 +16,6 @@
 [submodule "bundle/buffergator"]
 	path = bundle/buffergator
 	url = https://github.com/jeetsukumaran/vim-buffergator.git
+[submodule "bundle/checksyntax"]
+	path = bundle/checksyntax
+	url = https://github.com/tomtom/checksyntax_vim.git
