@@ -2,3 +2,6 @@ DOT VIM SETTINGS
 
 CLONING
 > curl https://raw.github.com/zowens/dot-vim/master/install.sh | sh
+
+ADDING NEW BUNDLE
+> git submodule add <git URL> bundle/<directory>

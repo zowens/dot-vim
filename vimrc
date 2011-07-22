@@ -28,3 +28,6 @@ set softtabstop=4
 if has("autocmd")
   filetype plugin indent on
 endif
+
+" command mapping from nt to NERDTree
+cmap nt NERDTree
