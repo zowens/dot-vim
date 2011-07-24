@@ -64,3 +64,6 @@ let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 
 " mapping for Gundo
 nnoremap <F5> :GundoToggle<CR>
+
+" Turn on brief-mode for JavaScript indenter
+let g:SimpleJsIndenter_BriefMode = 1
