@@ -67,6 +67,3 @@ nnoremap <F5> :GundoToggle<CR>
 
 " Turn on brief-mode for JavaScript indenter
 let g:SimpleJsIndenter_BriefMode = 1
-
-" Haskell mode
-au Bufenter *.hs compiler ghc
