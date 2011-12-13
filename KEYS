@@ -6,3 +6,11 @@ Various key mappings for quick reference
 :a Switches from .h -> .c file or .c -> .h
 
 :Gcommit / :Gedit / :Gstatus / :Git ... - various git commands
+
+\s - Toggle spell check
+[s - next mis-spelled word
+]s - previous mis-spelled word
+z= - open replacements
+1z= - get first replacement
+zw - add word to dictionary
+zg - delete word from dictionary
