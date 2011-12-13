@@ -20,3 +20,7 @@ GIT_SSL_NO_VERIFY=true git submodule update --init
 
 # install mupdf and xdotool
 sudo apt-get install xdotool mupdf
+
+# add path to bashrc
+echo "PATH=\$PATH:/.vim/bundle/live-latex-preview/scripts" >> ~/.bashrc
+echo "export PATH" >> ~/.bashrc
