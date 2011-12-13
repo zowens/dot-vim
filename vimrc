@@ -71,3 +71,7 @@ let g:SimpleJsIndenter_BriefMode = 1
 " Toggle spelling with \s
 nmap <silent> <leader>s :set spell!<CR>
 set spelllang=en_us
+
+" matching parens key maps
+nmap <silent> <leader>k v%
+nmap <silent> <ESC><C-K> v%x
