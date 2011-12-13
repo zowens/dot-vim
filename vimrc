@@ -41,10 +41,10 @@ map <C-H> <C-W>h
 map <C-K> <C-W>k
 
 " Stupid shift key fixes
-cmap W w 						
-cmap WQ wq
-cmap wQ wq
-cmap Q q
+"cmap W w 						
+"cmap WQ wq
+"cmap wQ wq
+"cmap Q q
 
 " turn off backup files
 set nobackup
@@ -67,3 +67,11 @@ nnoremap <F5> :GundoToggle<CR>
 
 " Turn on brief-mode for JavaScript indenter
 let g:SimpleJsIndenter_BriefMode = 1
+
+" Toggle spelling with \s
+nmap <silent> <leader>s :set spell!<CR>
+set spelllang=en_us
+
+" matching parens key maps
+nmap <silent> <leader>k v%
+nmap <silent> <ESC><C-K> v%x
