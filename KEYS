@@ -14,3 +14,6 @@ z= - open replacements
 1z= - get first replacement
 zw - add word to dictionary
 zg - delete word from dictionary
+
+ESC C-K - Yank matching parens and content
+\k - visually select matching parens
