@@ -75,3 +75,6 @@ set spelllang=en_us
 " matching parens key maps
 nmap <silent> <leader>k v%
 nmap <silent> <ESC><C-K> v%x
+
+" auto compile coffescript
+au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
