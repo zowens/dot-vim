@@ -78,3 +78,7 @@ nmap <silent> <ESC><C-K> v%x
 
 " auto compile coffescript
 au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
+
+" haskellmode-vim
+au Bufenter *.hs compiler ghc
+let g:haddock_browser = "/usr/bin/chromium-browser"
