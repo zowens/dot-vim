@@ -4,7 +4,7 @@ call pathogen#runtime_append_all_bundles()
 
 set hidden
 set number
-set tabstop=2
+set tabstop=4
 set smarttab
 set shiftwidth=2
 set autoindent
@@ -33,13 +33,6 @@ endif
 nmap <silent> <leader>nt :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 
-" Easier moving in tabs and windows
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-L> <C-W>l
-map <C-H> <C-W>h
-map <C-K> <C-W>k
-
 " Stupid shift key fixes
 "cmap W w 						
 "cmap WQ wq
@@ -51,16 +44,6 @@ set nobackup
 
 " Making it so ; works like : for commands. Saves typing and eliminates :W style typos due to lazy holding shift.
 nnoremap ; :
-
-"OmniCppComplete
-set omnifunc=syntaxcomplete#Complete
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-let OmniCpp_MayCompleteDot = 1 " autocomplete after .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
-let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 
 " mapping for Gundo
 nnoremap <F5> :GundoToggle<CR>
@@ -75,9 +58,6 @@ set spelllang=en_us
 " matching parens key maps
 nmap <silent> <leader>k v%
 nmap <silent> <ESC><C-K> v%x
-
-" auto compile coffescript
-au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 
 " haskellmode-vim
 au Bufenter *.hs compiler ghc
