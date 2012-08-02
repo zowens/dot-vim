@@ -55,3 +55,6 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/localvimrc"]
+	path = bundle/localvimrc
+	url = git://github.com/vim-scripts/localvimrc.git

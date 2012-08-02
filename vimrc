@@ -14,7 +14,12 @@ syntax on
 colorscheme solarized
 set background=light
 set listchars=tab:▸\ ,eol:¬
-set guifont=Monospace\ 11
+
+if has("win32")
+  set guifont=Consolas:h10
+else
+  set guifont=Monospace\ 11
+endif
 
 " exclusively use VIM settings (not VI settings)
 set nocompatible
@@ -32,12 +37,6 @@ endif
 " command mapping from nt to NERDTree
 nmap <silent> <leader>nt :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
-
-" Stupid shift key fixes
-"cmap W w 						
-"cmap WQ wq
-"cmap wQ wq
-"cmap Q q
 
 " turn off backup files
 set nobackup
@@ -62,3 +61,39 @@ nmap <silent> <ESC><C-K> v%x
 " haskellmode-vim
 au Bufenter *.hs compiler ghc
 let g:haddock_browser = "/usr/bin/chromium-browser"
+
+"" don't ask for reload of localvimrc
+let g:localvimrc_ask=0
+
+"" function to toggle numbering between absolute and relative
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+"" bind F1 to toggle
+nnoremap <F1> :call NumberToggle()<cr>
+:au FocusLost * :set number
+autocmd InsertEnter * :set number
+" automaticall set absolute line numbers when opening a document
+autocmd BufNewFile * :set number
+autocmd BufReadPost * :set number
+autocmd FilterReadPost * :set number
+autocmd FileReadPost * :set number
+
+
+"" fold javadoc
+set foldmethod=syntax
+set foldenable
+autocmd FileType java :set fmr=/**,*/ fdm=marker fdc=1 
+autocmd FileType cpp :set fmr=/**,*/ fdm=marker fdc=1
+autocmd FileType c :set fmr=/**,*/ fdm=marker fdc=1
+
+" complete options (disable preview scratch window)
+set completeopt=menu,menuone,longest
+
+" limit complete popup height
+set pumheight=15
