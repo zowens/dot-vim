@@ -1,7 +1,23 @@
 DOT VIM SETTINGS
 
-CLONING
+INSTALL ON LINUX
 > curl https://raw.github.com/zowens/dot-vim/master/install.sh | sh
 
 ADDING NEW BUNDLE
 > git submodule add <git URL> bundle/<directory>
+
+INSTALL ON WINDOWS
+
+    0) Install mysysgit
+        https://help.github.com/articles/set-up-git
+    1) open powershell
+    2) (new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex install-module posh-git
+    3) install-module posh-git
+    4) restart powershell
+    5) open %UserProfile%\Documents\WindowsPowerShell\Microsoft.Powershell_profile.ps1
+    6) Add the following line:
+            $end:path += ";" + (Get-Item "Env:ProgramFiles(x86)").Value + "\Git\bin"
+    7) open powershell again, go to user root 
+    8) git clone git://github.com/zowens/dot-vim.git vimfiles
+    9) Create symlink for vimrc (use cmd)
+        mklink _vimrc vimfiles\vimrc
