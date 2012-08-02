@@ -6,7 +6,7 @@ set hidden
 set number
 set tabstop=4
 set smarttab
-set shiftwidth=2
+set shiftwidth=4
 set autoindent
 set expandtab
 syntax on
@@ -26,6 +26,7 @@ set nocompatible
 
 "allow backspacing
 set backspace=indent,eol,start
+set whichwrap+=<,>,h,l
 
 set nowrap
 set softtabstop=4
@@ -40,6 +41,8 @@ let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn'
 
 " turn off backup files
 set nobackup
+set nowb
+set noswapfile
 
 " Making it so ; works like : for commands. Saves typing and eliminates :W style typos due to lazy holding shift.
 nnoremap ; :
@@ -50,9 +53,15 @@ nnoremap <F5> :GundoToggle<CR>
 " Turn on brief-mode for JavaScript indenter
 let g:SimpleJsIndenter_BriefMode = 1
 
-" Toggle spelling with \s
-nmap <silent> <leader>s :set spell!<CR>
+" Toggle spelling with \ss
+nmap <silent> <leader>ss :setlocal spell!<CR>
 set spelllang=en_us
+
+" spelling shortcuts
+map <leader>sn ]s
+map <leader>sp [s
+map <leader>sa zg
+map <leader>s? z=
 
 " matching parens key maps
 nmap <silent> <leader>k v%
@@ -97,3 +106,44 @@ set completeopt=menu,menuone,longest
 
 " limit complete popup height
 set pumheight=15
+
+" auto read when file changed elsewhere
+set autoread
+
+" fast saving with \w
+nmap <leader>w :w!<cr>
+
+" ignore compiled files
+set wildignore=*.o,*~,*.hi
+
+" always show location
+set ruler
+
+" ignore case when searching, but be smart about it
+set ignorecase
+set smartcase
+
+" don't redraw while executing macros
+set lazyredraw
+
+set showmatch
+
+" disable annoying sounds
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+" smart indent
+set ai
+set si
+
+" Map space to search and c-space to backwards search
+map <space> /
+map <c-space> ?
+
+" use \cd to change directory of the current file
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+" toggle paste mode
+map <leader>pp :setlocal paste!<cr>
