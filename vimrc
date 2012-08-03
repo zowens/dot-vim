@@ -11,6 +11,8 @@ set autoindent
 set expandtab
 syntax on
 
+set encoding=utf-8
+
 colorscheme solarized
 set background=light
 set listchars=tab:▸\ ,eol:¬
