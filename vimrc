@@ -152,3 +152,5 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " toggle paste mode
 map <leader>pp :setlocal paste!<cr>
+
+let g:SuperTabDefaultCompletionType = "context"
