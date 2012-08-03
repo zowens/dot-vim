@@ -71,7 +71,10 @@ nmap <silent> <ESC><C-K> v%x
 
 " haskellmode-vim
 au Bufenter *.hs compiler ghc
-let g:haddock_browser = "/usr/bin/chromium-browser"
+if has("win32")
+else
+    let g:haddock_browser = "/usr/bin/chromium-browser"
+endif
 
 "" don't ask for reload of localvimrc
 let g:localvimrc_ask=0
