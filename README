@@ -21,3 +21,4 @@ INSTALL ON WINDOWS
     8) git clone git://github.com/zowens/dot-vim.git vimfiles
     9) Create symlink for vimrc (use cmd)
         mklink _vimrc vimfiles\vimrc
+    10) call vimfiles\update.ps1 in powershell
