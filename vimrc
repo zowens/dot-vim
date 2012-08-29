@@ -154,3 +154,9 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 map <leader>pp :setlocal paste!<cr>
 
 let g:SuperTabDefaultCompletionType = "context"
+
+"" javacomplete
+if has("autocmd")
+  autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+  autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
+endif
