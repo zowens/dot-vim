@@ -16,9 +16,6 @@
 [submodule "bundle/buffergator"]
 	path = bundle/buffergator
 	url = https://github.com/jeetsukumaran/vim-buffergator.git
-[submodule "bundle/checksyntax"]
-	path = bundle/checksyntax
-	url = https://github.com/tomtom/checksyntax_vim.git
 [submodule "bundle/haskell-vim"]
 	path = bundle/haskell-vim
 	url = https://github.com/vim-scripts/haskell.vim.git
@@ -28,9 +25,6 @@
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
-[submodule "bundle/javascript-indenter"]
-	path = bundle/javascript-indenter
-	url = https://github.com/jiangmiao/simple-javascript-indenter.git
 [submodule "bundle/haskellmode"]
 	path = bundle/haskellmode
 	url = https://github.com/lukerandall/haskellmode-vim.git
@@ -55,12 +49,6 @@
 [submodule "bundle/vim-addon-mw-utils"]
 	path = bundle/vim-addon-mw-utils
 	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
-[submodule "bundle/vim-syntastic"]
-	path = bundle/vim-syntastic
-	url = git://github.com/scrooloose/syntastic.git
 [submodule "bundle/tlib"]
 	path = bundle/tlib
 	url = git://github.com/vim-scripts/tlib.git
