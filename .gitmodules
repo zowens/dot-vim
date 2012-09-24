@@ -64,3 +64,12 @@
 [submodule "bundle/tlib"]
 	path = bundle/tlib
 	url = git://github.com/vim-scripts/tlib.git
+[submodule "bundle/vimproc"]
+	path = bundle/vimproc
+	url = git://github.com/Shougo/vimproc.git
+[submodule "bundle/ghcmod-vim"]
+	path = bundle/ghcmod-vim
+	url = git://github.com/eagletmt/ghcmod-vim.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = git://github.com/godlygeek/tabular.git
