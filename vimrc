@@ -157,6 +157,5 @@ let g:SuperTabDefaultCompletionType = "context"
 
 "" javacomplete
 if has("autocmd")
-  autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-  autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
+  autocmd Filetype haskell setlocal omnifunc=necoghc#omnifunc 
 endif

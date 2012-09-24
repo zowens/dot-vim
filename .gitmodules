@@ -67,6 +67,3 @@
 [submodule "bundle/tlib"]
 	path = bundle/tlib
 	url = git://github.com/vim-scripts/tlib.git
-[submodule "bundle/javacomplete"]
-	path = bundle/javacomplete
-	url = git://github.com/VictorDenisov/javacomplete.git
