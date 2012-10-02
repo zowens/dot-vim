@@ -61,7 +61,6 @@ map <leader>sn ]s
 map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
-map <leader>s1 z1
 
 " matching parens key maps
 nmap <silent> <leader>k v%
@@ -152,9 +151,3 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 map <leader>pp :setlocal paste!<cr>
 
 let g:SuperTabDefaultCompletionType = "context"
-
-if has("autocmd")
-  autocmd Filetype haskell setlocal omnifunc=necoghc#omnifunc 
-endif
-
-autocmd BufWritePost *.hs GhcModCheckAndLintAsync
