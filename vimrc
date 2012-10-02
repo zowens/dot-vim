@@ -60,6 +60,7 @@ set spelllang=en_us
 map <leader>sn ]s
 map <leader>sp [s
 map <leader>sa zg
+map <leader>sd zG
 map <leader>s? z=
 
 " matching parens key maps
@@ -144,3 +145,5 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 map <leader>pp :setlocal paste!<cr>
 
 let g:SuperTabDefaultCompletionType = "context"
+
+nmap <F8> :TagbarToggle<CR>

@@ -7,13 +7,40 @@ Various key mappings for quick reference
 
 :Gcommit / :Gedit / :Gstatus / :Git ... - various git commands
 
-\s - Toggle spell check
-[s - next mis-spelled word
-]s - previous mis-spelled word
-z= - open replacements
+\ss - Toggle spell check
+\sn - next mis-spelled word
+\sp - previous mis-spelled word
+\s? - open replacements
 1z= - get first replacement
-zw - add word to dictionary
-zg - delete word from dictionary
+\sa - add word to dictionary
+\sd - delete word from dictionary
 
 ESC C-K - Yank matching parens and content
 \k - visually select matching parens
+
+F1 - toggle relative and absolute numbers
+
+F5 - toggle Gundo
+
+F8 - toggles tagbar
+
+zR - unfold
+zM - fold
+
+:ccl - close quickfix window
+
+\cc - comment out lines in visual mode
+\cm - like cc but uses minimal comments
+\cy - yanks commented lines
+\cu - uncomment
+
+C-P - cycle through yank ring (after a p command)
+
+HASKELL:
+\gt - type for expression
+\gc - check for errors
+\gl - lint
+\ge - expand expression
+\gi - info
+
+
