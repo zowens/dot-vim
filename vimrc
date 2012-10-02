@@ -134,7 +134,7 @@ set showmatch
 set noerrorbells
 set novisualbell
 set t_vb=
-set tm=500
+set tm=1000 " timeout to 1 second
 
 " smart indent
 set ai
