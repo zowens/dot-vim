@@ -147,3 +147,5 @@ map <leader>pp :setlocal paste!<cr>
 let g:SuperTabDefaultCompletionType = "context"
 
 nmap <F8> :TagbarToggle<CR>
+
+let g:ctrlp_map = '<c-t>'
