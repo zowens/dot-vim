@@ -19,6 +19,7 @@ set listchars=tab:▸\ ,eol:¬
 
 if has("win32")
   set guifont=Consolas:h10
+  set fileformats=dos
 else
   set guifont=Monospace\ 11
 endif
@@ -80,7 +81,7 @@ function! NumberToggle()
 endfunc
 
 "" bind F1 to toggle
-nnoremap <F1> :call NumberToggle()<cr>
+nnoremap <F2> :call NumberToggle()<cr>
 :au FocusLost * :set number
 autocmd InsertEnter * :set number
 " automaticall set absolute line numbers when opening a document
@@ -149,3 +150,8 @@ let g:SuperTabDefaultCompletionType = "context"
 nmap <F8> :TagbarToggle<CR>
 
 let g:ctrlp_map = '<c-t>'
+
+"disable loading perforce by default
+if !exists("$TIER")
+    let loaded_perforce=1
+endif
