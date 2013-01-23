@@ -14,7 +14,7 @@ syntax on
 set encoding=utf-8
 
 colorscheme solarized
-set background=light
+set background=dark
 set listchars=tab:▸\ ,eol:¬
 
 if has("win32")
