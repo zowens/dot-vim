@@ -61,12 +61,12 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
-[submodule ".\\bundle\\coffee-script"]
+[submodule "bundle/coffee-script"]
 	path = bundle/coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
-[submodule ".\\bundle\\perforce"]
+[submodule "bundle/perforce"]
 	path = bundle/perforce
 	url = git://github.com/vim-scripts/perforce.vim.git
-[submodule "bundle\\web-indent"]
+[submodule "bundle/web-indent"]
 	path = bundle/web-indent
 	url = git://github.com/lukaszb/vim-web-indent.git
