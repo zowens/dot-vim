@@ -19,9 +19,14 @@ set listchars=tab:▸\ ,eol:¬
 
 if has("win32")
   set guifont=Consolas:h10
-  set fileformats=dos
+  "disable loading perforce in tier
+  if !exists("$TIER")
+      let loaded_perforce=1
+  endif
 else
   set guifont=Monospace\ 11
+  " supress loading of perforce plugin
+  let loaded_perforce=1
 endif
 
 " exclusively use VIM settings (not VI settings)
@@ -150,8 +155,3 @@ let g:SuperTabDefaultCompletionType = "context"
 nmap <F8> :TagbarToggle<CR>
 
 let g:ctrlp_map = '<c-t>'
-
-"disable loading perforce by default
-if !exists("$TIER")
-    let loaded_perforce=1
-endif
