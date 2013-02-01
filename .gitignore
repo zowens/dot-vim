@@ -1,3 +1,4 @@
 support_src/*
 bundle/haskellmode-vim/tags
 .netrwhist
+bundle/perforce
