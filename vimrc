@@ -155,3 +155,5 @@ let g:SuperTabDefaultCompletionType = "context"
 nmap <F8> :TagbarToggle<CR>
 
 let g:ctrlp_map = '<c-t>'
+
+nmap <buffer> <c-s-t> :call ctrlp#init(ctrlp#mixed#id())
