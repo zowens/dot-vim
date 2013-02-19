@@ -18,7 +18,7 @@ set background=dark
 set listchars=tab:▸\ ,eol:¬
 
 if has("win32")
-  set guifont=Consolas:h10
+  set guifont=Consolas\ for\ Powerline\ FixedD:h9
   "disable loading perforce in tier
   if !exists("$TIER")
       let loaded_perforce=1
@@ -29,8 +29,12 @@ else
   let loaded_perforce=1
 endif
 
+let g:Powerline_symbols="fancy"
+
 " exclusively use VIM settings (not VI settings)
 set nocompatible
+
+set laststatus=2
 
 "allow backspacing
 set backspace=indent,eol,start
