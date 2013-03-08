@@ -140,7 +140,7 @@ snippet sing
 		$1 = function $1($2) {
 			return instance;
 		};
-		
+
 		// carry over the prototype properties
 		$1.prototype = this;
 
@@ -154,3 +154,10 @@ snippet sing
 
 		return instance;
 	}
+snippet define
+	define([
+		${1:}
+	], function(${2:}) {
+		"use strict";
+		${3:// code...}
+	});
