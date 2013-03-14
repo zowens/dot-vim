@@ -1,4 +1,6 @@
 support_src/*
 bundle/haskellmode-vim/tags
 .netrwhist
+bundle/perforce.vim
 bundle/perforce
+bundle/scoped_tags
