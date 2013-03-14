@@ -161,4 +161,4 @@ nmap <F8> :TagbarToggle<CR>
 let g:ctrlp_map = '<c-t>'
 
 " remove trailing whitespace on save
-nmap <F7> :%s/\s\+$//e
+nmap <F7> :%s/\s\+$//e<cr>
