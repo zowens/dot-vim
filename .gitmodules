@@ -76,6 +76,3 @@
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
 	url = git://github.com/Lokaltog/vim-easymotion.git
-[submodule "bundle/tern"]
-	path = bundle/tern
-	url = git://github.com/marijnh/tern_for_vim.git
