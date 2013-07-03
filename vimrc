@@ -24,7 +24,7 @@ if has("win32")
       let loaded_perforce=1
   endif
 else
-  set guifont=Monospace\ 11
+  set guifont=Inconsolata\-dz\ for\ Powerline:h14
   " supress loading of perforce plugin
   let loaded_perforce=1
 endif
