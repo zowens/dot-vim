@@ -162,3 +162,6 @@ let g:ctrlp_map = '<c-t>'
 
 " remove trailing whitespace on save
 nmap <F7> :%s/\s\+$//e<cr>
+
+let g:airline_enable_syntastic=1
+let g:airline_enable_fugitive=1
