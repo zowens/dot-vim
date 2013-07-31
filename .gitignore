@@ -6,3 +6,4 @@ bundle/perforce
 bundle/scoped_tags
 bundle/vim-css3
 bundle/vimless
+bundle/*/doc/tags
