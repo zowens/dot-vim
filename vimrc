@@ -164,7 +164,6 @@ let g:ctrlp_map = '<c-t>'
 nmap <F7> :%s/\s\+$//e<cr>
 
 let g:airline_enable_syntastic=1
-let g:airline_enable_fugitive=1
 
 if $TERM == "xterm"
     set t_Co=256
