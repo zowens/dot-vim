@@ -49,7 +49,7 @@ endif
 
 " command mapping from nt to NERDTree
 nmap <silent> <leader>nt :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', 'node_modules']
 
 " turn off backup files
 set nobackup
@@ -120,7 +120,7 @@ set autoread
 nmap <leader>w :w!<cr>
 
 " ignore compiled files
-set wildignore=*.o,*~,*.hi
+set wildignore=*.o,*~,*.hi,*.zip,*.so
 
 " always show location
 set ruler
@@ -159,6 +159,7 @@ let g:SuperTabDefaultCompletionType = "context"
 nmap <F8> :TagbarToggle<CR>
 
 let g:ctrlp_map = '<c-t>'
+let g:ctrlp_custom_ignore = '\v[\/]((\.(git|hg|svn))|node_modules)$'
 
 " remove trailing whitespace on save
 nmap <F7> :%s/\s\+$//e<cr>
