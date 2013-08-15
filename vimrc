@@ -160,6 +160,7 @@ nmap <F8> :TagbarToggle<CR>
 
 let g:ctrlp_map = '<c-t>'
 let g:ctrlp_custom_ignore = '\v[\/]((\.(git|hg|svn))|node_modules)$'
+let g:ctrlp_working_path_mode = 0
 
 " remove trailing whitespace on save
 nmap <F7> :%s/\s\+$//e<cr>
