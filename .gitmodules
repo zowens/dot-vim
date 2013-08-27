@@ -76,3 +76,6 @@
 [submodule "bundle/vim-less"]
 	path = bundle/vim-less
 	url = github://groenewege/vim-less
+[submodule "bundle/neocomplete"]
+	path = bundle/neocomplete
+	url = git@github.com:Shougo/neocomplete.vim.git

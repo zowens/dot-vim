@@ -170,3 +170,6 @@ let g:airline_enable_syntastic=1
 if $TERM == "xterm"
     set t_Co=256
 endif
+
+" start neocomplete at startup
+let g:neocomplete#enable_at_startup = 1
