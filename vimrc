@@ -89,7 +89,7 @@ function! NumberToggle()
   endif
 endfunc
 
-"" bind F1 to toggle
+"" bind F2 to toggle
 nnoremap <F2> :call NumberToggle()<cr>
 :au FocusLost * :set number
 autocmd InsertEnter * :set number
