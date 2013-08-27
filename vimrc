@@ -172,4 +172,11 @@ if $TERM == "xterm"
 endif
 
 " start neocomplete at startup
-let g:neocomplete#enable_at_startup = 1
+if has("lua")
+    let g:neocomplete#enable_at_startup = 1
+else 
+    let g:neocomplete#enable_at_startup = 0
+endif
+
+"neco ghc
+let g:necoghc_enable_detailed_browse = 1
