@@ -24,7 +24,7 @@ if has("win32")
       let loaded_perforce=1
   endif
 else
-  set guifont=Inconsolata\-dz\ for\ Powerline:h14
+  set guifont=Inconsolata\ for\ Powerline:h16
   " supress loading of perforce plugin
   let loaded_perforce=1
 endif
@@ -103,7 +103,7 @@ autocmd FileReadPost * :set number
 "" fold javadoc
 set foldmethod=syntax
 set foldenable
-autocmd FileType java :set fmr=/**,*/ fdm=marker fdc=1 
+autocmd FileType java :set fmr=/**,*/ fdm=marker fdc=1
 autocmd FileType cpp :set fmr=/**,*/ fdm=marker fdc=1
 autocmd FileType c :set fmr=/**,*/ fdm=marker fdc=1
 
@@ -166,6 +166,7 @@ let g:ctrlp_working_path_mode = 0
 nmap <F7> :%s/\s\+$//e<cr>
 
 let g:airline_enable_syntastic=1
+let g:airline_powerline_fonts = 1
 
 if $TERM == "xterm"
     set t_Co=256
@@ -174,7 +175,7 @@ endif
 " start neocomplete at startup
 if has("lua")
     let g:neocomplete#enable_at_startup = 1
-else 
+else
     let g:neocomplete#enable_at_startup = 0
 endif
 
