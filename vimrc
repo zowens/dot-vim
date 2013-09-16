@@ -1,7 +1,9 @@
 filetype off
+" standard pathogen stuff
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
+" standard vim editing config, 4 space tabs
 set hidden
 set number
 set tabstop=4
@@ -9,8 +11,10 @@ set smarttab
 set shiftwidth=4
 set autoindent
 set expandtab
+
 syntax on
 
+" UTF-8 always
 set encoding=utf-8
 
 colorscheme solarized
@@ -47,35 +51,12 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
-" command mapping from nt to NERDTree
-nmap <silent> <leader>nt :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', 'node_modules']
 
 " turn off backup files
 set nobackup
 set nowb
 set noswapfile
-
-" Making it so ; works like : for commands. Saves typing and eliminates :W style typos due to lazy holding shift.
-nnoremap ; :
-
-" mapping for Gundo
-nnoremap <F5> :GundoToggle<CR>
-
-" Toggle spelling with \ss
-nmap <silent> <leader>ss :setlocal spell!<CR>
-set spelllang=en_us
-
-" spelling shortcuts
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>sd zG
-map <leader>s? z=
-
-" matching parens key maps
-nmap <silent> <leader>k v%
-nmap <silent> <ESC><C-K> v%x
 
 "" don't ask for reload of localvimrc
 let g:localvimrc_ask=0
@@ -89,8 +70,6 @@ function! NumberToggle()
   endif
 endfunc
 
-"" bind F2 to toggle
-nnoremap <F2> :call NumberToggle()<cr>
 :au FocusLost * :set number
 autocmd InsertEnter * :set number
 " automaticall set absolute line numbers when opening a document
@@ -104,6 +83,7 @@ autocmd FileReadPost * :set number
 set foldmethod=syntax
 set foldenable
 autocmd FileType java :set fmr=/**,*/ fdm=marker fdc=1
+autocmd FileType javascript :set fmr=/**,*/ fdm=marker fdc=1
 autocmd FileType cpp :set fmr=/**,*/ fdm=marker fdc=1
 autocmd FileType c :set fmr=/**,*/ fdm=marker fdc=1
 
@@ -115,9 +95,6 @@ set pumheight=15
 
 " auto read when file changed elsewhere
 set autoread
-
-" fast saving with \w
-nmap <leader>w :w!<cr>
 
 " ignore compiled files
 set wildignore=*.o,*~,*.hi,*.zip,*.so
@@ -144,30 +121,16 @@ set tm=1000 " timeout to 1 second
 set ai
 set si
 
-" Map space to search and c-space to backwards search
-map <space> /
-map <c-space> ?
-
-" use \cd to change directory of the current file
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
-" toggle paste mode
-map <leader>pp :setlocal paste!<cr>
-
 let g:SuperTabDefaultCompletionType = "context"
 
-nmap <F8> :TagbarToggle<CR>
-
-let g:ctrlp_map = '<c-t>'
 let g:ctrlp_custom_ignore = '\v[\/]((\.(git|hg|svn))|node_modules)$'
 let g:ctrlp_working_path_mode = 0
 
-" remove trailing whitespace on save
-nmap <F7> :%s/\s\+$//e<cr>
-
+" airline configuration
 let g:airline_enable_syntastic=1
 let g:airline_powerline_fonts = 1
 
+" if it's in an xterm window, use 256 colors
 if $TERM == "xterm"
     set t_Co=256
 endif
@@ -181,3 +144,47 @@ endif
 
 "neco ghc
 let g:necoghc_enable_detailed_browse = 1
+
+" ---------------------------------------
+"  Key mappings
+" ---------------------------------------
+let g:ctrlp_map = '<c-t>'
+" Making it so ; works like : for commands. Saves typing and eliminates :W style typos due to lazy holding shift.
+nnoremap ; :
+"" bind F2 to toggle
+nnoremap <F2> :call NumberToggle()<cr>
+" mapping for Gundo
+nnoremap <F5> :GundoToggle<CR>
+" remove trailing whitespace with F7
+nmap <F7> :%s/\s\+$//e<cr>
+" tagbar toggle with F8
+nmap <F8> :TagbarToggle<CR>
+" command mapping from nt to NERDTree
+nmap <silent> <leader>nt :NERDTreeToggle<CR>
+" Toggle spelling with \ss
+nmap <silent> <leader>ss :setlocal spell!<CR>
+set spelllang=en_us
+
+" spelling shortcuts
+map <leader>sn ]s
+map <leader>sp [s
+map <leader>sa zg
+map <leader>sd zG
+map <leader>s? z=
+
+" matching parens key maps
+nmap <silent> <leader>k v%
+nmap <silent> <ESC><C-K> v%x
+" fast saving with \w
+nmap <leader>w :w!<cr>
+
+" Map space to search and c-space to backwards search
+map <space> /
+map <c-space> ?
+
+" use \cd to change directory of the current file
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+" toggle paste mode
+map <leader>pp :setlocal paste!<cr>
+" ---------------------------------------
