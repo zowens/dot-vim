@@ -83,7 +83,7 @@ autocmd FileReadPost * :set number
 set foldmethod=syntax
 set foldenable
 autocmd FileType java :set fmr=/**,*/ fdm=marker fdc=1
-autocmd FileType javascript :set fmr=/**,*/ fdm=marker fdc=1
+autocmd FileType javascript :set fmr=/*,*/ fdm=marker fdc=1
 autocmd FileType cpp :set fmr=/**,*/ fdm=marker fdc=1
 autocmd FileType c :set fmr=/**,*/ fdm=marker fdc=1
 
