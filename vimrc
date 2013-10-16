@@ -51,7 +51,7 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', 'node_modules']
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', 'node_modules', 'dist', 'target']
 
 " turn off backup files
 set nobackup
@@ -123,7 +123,7 @@ set si
 
 let g:SuperTabDefaultCompletionType = "context"
 
-let g:ctrlp_custom_ignore = '\v[\/]((\.(git|hg|svn))|node_modules)$'
+let g:ctrlp_custom_ignore = '\v[\/]((\.(git|hg|svn))|node_modules|dist|target)$'
 let g:ctrlp_working_path_mode = 0
 
 " airline configuration
