@@ -145,6 +145,10 @@ endif
 "neco ghc
 let g:necoghc_enable_detailed_browse = 1
 
+
+" ECLIM settings
+let g:EclimBrowser = 'open'
+
 " ---------------------------------------
 "  Key mappings
 " ---------------------------------------
@@ -188,3 +192,4 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 " toggle paste mode
 map <leader>pp :setlocal paste!<cr>
 " ---------------------------------------
+
