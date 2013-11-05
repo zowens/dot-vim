@@ -156,13 +156,13 @@ let g:ctrlp_map = '<c-t>'
 " Making it so ; works like : for commands. Saves typing and eliminates :W style typos due to lazy holding shift.
 nnoremap ; :
 "" bind F2 to toggle
-nnoremap <F2> :call NumberToggle()<cr>
+nnoremap <silent> <F2> :call NumberToggle()<cr>
 " mapping for Gundo
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <silent> <F5> :GundoToggle<CR>
 " remove trailing whitespace with F7
-nmap <F7> :%s/\s\+$//e<cr>
+nmap <silent> <F7> :%s/\s\+$//e<cr>
 " tagbar toggle with F8
-nmap <F8> :TagbarToggle<CR>
+nmap <silent> <F8> :TagbarToggle<CR>
 " command mapping from nt to NERDTree
 nmap <silent> <leader>nt :NERDTreeToggle<CR>
 " Toggle spelling with \ss
@@ -191,5 +191,14 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " toggle paste mode
 map <leader>pp :setlocal paste!<cr>
+
+map <silent> <leader>ji :JavaImportOrganize<cr>
+map <silent> <leader>js :JavaSearch<cr>
+map <silent> <leader>jd :JavaDocSearch<cr>
+map <silent> <leader>jc :JavaDocComment<cr>
+map <silent> <leader>jk :JavaCorrect<cr>
+map <silent> <leader>ju :JavaDelegate<cr>
+map <silent> <leader>js :JavaGetSet<cr>
+map <silent> <leader>jg :JavaGet<cr>
 " ---------------------------------------
 
