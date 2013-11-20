@@ -86,6 +86,7 @@ autocmd FileType java :set fmr=/**,*/ fdm=marker fdc=1
 autocmd FileType javascript :set fmr=/*,*/ fdm=marker fdc=1
 autocmd FileType cpp :set fmr=/**,*/ fdm=marker fdc=1
 autocmd FileType c :set fmr=/**,*/ fdm=marker fdc=1
+autocmd Syntax go normal zR
 
 " complete options (disable preview scratch window)
 set completeopt=menu,menuone,longest
