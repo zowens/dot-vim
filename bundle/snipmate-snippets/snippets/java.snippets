@@ -90,59 +90,16 @@ snippet tryf
 	} catch(${1:Exception} ${2:e}) {
 	} finally {
 	}
-snippet rst
-	ResultSet ${1:rst}${2: = null}${3};${4}
-snippet @au
-	@author `system("grep \`id -un\` /etc/passwd | cut -d \":\" -f5")`
-snippet mm
-	@ManyToMany
-	${1}
-snippet mo
-	@ManyToOne
-	${1}
-snippet om
-	OneToMany${1:(cascade=CascadeType.ALL)}
-	${2}
-snippet oo
-	@OneToOne
-	${1}
 snippet action
 	public static void ${1:index}(${2:args}) { ${3} }
-snippet before
-	@Before
-	static void ${1:intercept}(${2:args}) { ${3} }
 snippet debug
-	Logger.debug(${1:param});${2}
+	LOGGER.debug(${1:param});${2}
 snippet error
-	Logger.error(${1:param});${2}
-snippet findall
-	List<${1:listName}> ${2:items} = ${1}.findAll();${3}
-snippet findbyid
-	${1:var} ${2:item} = ${1}.findById(${3});${4}
+	LOGGER.error(${1:param});${2}
 snippet info
-	Logger.info(${1:param});${2}
-snippet rnf
-	notFound(${1:param});${2}
-snippet rnfin
-	notFoundIfNull(${1:param});${2}
-snippet rr
-	redirect(${1:param});${2}
-snippet ru
-	unauthorized(${1:param});${2}
-snippet ren
-	render(${1:param});${2}
-snippet rena
-	renderArgs.put("${1}", ${2});${3}
-snippet renb
-	renderBinary(${1:param});${2}
-snippet renj
-	renderJSON(${1:param});${2}
-snippet renx
-	renderXml(${1:param});${2}
-snippet unless
-	(unless=${1:param});${2}
+	LOGGER.info(${1:param});${2}
 snippet warn
-	Logger.warn(${1:param});${2}
+	LOGGER.warn(${1:param});${2}
 snippet sysout
 	System.out.println(${1});
 snippet syserr
@@ -163,3 +120,19 @@ snippet prop
 	${1:public} ${2:String} get${3:}(){
 		return this.${4:};
 	}
+snippet controller
+	@Controller
+	@RequestMapping("${2:}")
+	public class ${1:`Filename("", "untitled")`} {
+	}
+snippet logger
+	private static final Logger LOGGER = LoggerFactory.getLogger(${1:`Filename("", "untitled")`}.class);
+snippet req
+	@RequestMapping(value = "/${1:entity}", method = RequestMethod.${2:GET}, produces=MediaType.APPLICATION_JSON_VALUE)
+	@ResponseStatus(value=HttpStatus.OK)
+	public @ResponseBody ${3:EntryType} get$1(
+				HttpServletRequest request,
+				HttpServletResponse respose) throws ResourceNotFoundException, BadRequestException {
+	}
+snippet param
+	@PathVariable("${1:id}") String $1,
