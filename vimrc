@@ -193,13 +193,16 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 " toggle paste mode
 map <leader>pp :setlocal paste!<cr>
 
+" retab
+nmap <silent> <leader>rt :retab!<cr>
+
 map <silent> <leader>ji :JavaImportOrganize<cr>
+map <silent> <leader>jm :JavaImpl<cr>
 map <silent> <leader>js :JavaSearch<cr>
 map <silent> <leader>jd :JavaDocSearch<cr>
 map <silent> <leader>jc :JavaDocComment<cr>
 map <silent> <leader>jk :JavaCorrect<cr>
 map <silent> <leader>ju :JavaDelegate<cr>
-map <silent> <leader>js :JavaGetSet<cr>
-map <silent> <leader>jg :JavaGet<cr>
+map <silent> <leader>jg :JavaGetSet<cr>
 " ---------------------------------------
 
