@@ -64,6 +64,7 @@ snippet cs
 snippet tc
 	public class ${1:`Filename()`} extends ${2:TestCase}
 snippet t
+	@Test
 	public void test${1:Name}() throws Exception ${2}
 snippet cl
 	class ${1:`Filename("", "untitled")`} ${2}
@@ -136,3 +137,30 @@ snippet req
 	}
 snippet param
 	@PathVariable("${1:id}") String $1,
+snippet inheritDoc
+	/**
+	 * {@inheritDoc}
+	 */
+snippet eq
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		if (obj == this) {
+			return true;
+		}
+		if (!(obj instanceof ${1:`Filename("", "untitled")`})) {
+			return false;
+		}
+		$1 ref = ($1)obj;
+		return new EqualsBuilder()
+			.append(${2:field}, ref.$2)
+			.isEquals();
+	}
+
+	public int hashCode() {
+		return new HashCodeBuilder(${3:prime1}, ${4:prime2})
+				.append($2)
+				.toHashCode();
+	}
