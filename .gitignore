@@ -6,4 +6,6 @@ bundle/perforce
 bundle/scoped_tags
 bundle/vim-css3
 bundle/vimless
-bundle/*/doc/tags
+bundle/*/doc/**
+bundle/xml/doc/tags
+bundle/xml/doc/xml-plugin.txt
