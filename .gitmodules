@@ -52,12 +52,6 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
-[submodule "bundle/coffee-script"]
-	path = bundle/coffee-script
-	url = git://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle/web-indent"]
-	path = bundle/web-indent
-	url = git://github.com/lukaszb/vim-web-indent.git
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
@@ -73,9 +67,6 @@
 [submodule "bundle/airline"]
 	path = bundle/airline
 	url = https://github.com/bling/vim-airline.git
-[submodule "bundle/vim-less"]
-	path = bundle/vim-less
-	url = git@github.com:groenewege/vim-less
 [submodule "bundle/neocomplete"]
 	path = bundle/neocomplete
 	url = git@github.com:Shougo/neocomplete.vim.git
