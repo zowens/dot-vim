@@ -164,3 +164,7 @@ snippet eq
 				.append($2)
 				.toHashCode();
 	}
+snippet metrics
+	@Counted(name="${1:name}_count", monotonic=true)
+	@Metered(name="$1_metered")
+	@Timed(name="$1_timed")
