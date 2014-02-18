@@ -77,6 +77,7 @@ autocmd BufNewFile * :set number
 autocmd BufReadPost * :set number
 autocmd FilterReadPost * :set number
 autocmd FileReadPost * :set number
+autocmd BufWritePre *.go Fmt
 
 
 "" fold javadoc
