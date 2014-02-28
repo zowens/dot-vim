@@ -207,3 +207,6 @@ map <silent> <leader>ju :JavaDelegate<cr>
 map <silent> <leader>jg :JavaGetSet<cr>
 " ---------------------------------------
 
+" Use goimports instead of go fmt
+" https://godoc.org/code.google.com/p/go.tools/cmd/goimports
+" let g:gofmt_command = gomports
