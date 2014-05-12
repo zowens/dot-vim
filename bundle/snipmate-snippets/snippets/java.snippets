@@ -74,8 +74,6 @@ snippet m
 	${1:void} ${2:method}(${3}) ${4:throws }${5}
 snippet v
 	${1:String} ${2:var}${3: = null}${4};${5}
-snippet co
-	static public final ${1:String} ${2:var} = ${3};${4}
 snippet cos
 	static public final String ${1:var} = "${2}";${3}
 snippet as
@@ -130,18 +128,16 @@ snippet logger
 	private static final Logger LOGGER = LoggerFactory.getLogger(${1:`Filename("", "untitled")`}.class);
 snippet req
 	@RequestMapping(value = "/${1:entity}", method = RequestMethod.${2:GET}, produces=MediaType.APPLICATION_JSON_VALUE)
-	@ResponseStatus(value=HttpStatus.OK)
-	public @ResponseBody ${3:EntryType} get$1(
-				HttpServletRequest request,
-				HttpServletResponse respose) throws ResourceNotFoundException, BadRequestException {
+	public ResponseEntity<${3:EntryType}> get() {
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 snippet param
-	@PathVariable("${1:id}") String $1,
+	@PathVariable("${1:id}") String $1
 snippet inheritDoc
 	/**
 	 * {@inheritDoc}
 	 */
-snippet eq
+snippet equality
 	@Override
 	public boolean equals(Object obj) {
 		if (obj == null) {
@@ -165,6 +161,10 @@ snippet eq
 				.toHashCode();
 	}
 snippet metrics
-	@Counted(name="${1:name}_count", monotonic=true)
-	@Metered(name="$1_metered")
 	@Timed(name="$1_timed")
+snippet const
+	${1:private} static final ${2:String} ${3:NAME} = ${4:}
+snippet counter
+	private final Counter ${1:foo}Counter = MetricsRegistry.INSTANCE.get().counter("$1");
+snippet timer
+	private final Timer ${1:foo}Timer = MetricsRegistry.INSTANCE.get().timer("$1");
