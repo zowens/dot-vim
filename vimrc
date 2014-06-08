@@ -77,7 +77,8 @@ autocmd BufNewFile * :set number
 autocmd BufReadPost * :set number
 autocmd FilterReadPost * :set number
 autocmd FileReadPost * :set number
-autocmd BufWritePre *.go Fmt
+" Go fmt - fail silently
+let g:go_fmt_fail_silently = 1
 
 
 "" fold javadoc
@@ -205,8 +206,13 @@ map <silent> <leader>jc :JavaDocComment<cr>
 map <silent> <leader>jk :JavaCorrect<cr>
 map <silent> <leader>ju :JavaDelegate<cr>
 map <silent> <leader>jg :JavaGetSet<cr>
-" ---------------------------------------
 
-" Use goimports instead of go fmt
-" https://godoc.org/code.google.com/p/go.tools/cmd/goimports
-" let g:gofmt_command = gomports
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap gd <Plug>(go-def)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+" ---------------------------------------

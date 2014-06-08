@@ -82,9 +82,9 @@
 [submodule "bundle/vim-signature"]
 	path = bundle/vim-signature
 	url = git@github.com:kshenoy/vim-signature.git
-[submodule "bundle/vim-golang"]
-	path = bundle/vim-golang
-	url = git@github.com:jnwhiteh/vim-golang.git
 [submodule "bundle/xmledit"]
 	path = bundle/xmledit
 	url = gh://sukima/xmledit
+[submodule "bundle/vim-go"]
+	path = bundle/vim-go
+	url = gh://fatih/vim-go
