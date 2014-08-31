@@ -88,3 +88,6 @@
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = gh://fatih/vim-go
+[submodule "bundle/jedi-vim"]
+	path = bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
