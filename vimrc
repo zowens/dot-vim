@@ -21,17 +21,8 @@ colorscheme solarized
 set background=dark
 set listchars=tab:▸\ ,eol:¬
 
-if has("win32")
-  set guifont=Consolas\ for\ Powerline\ FixedD:h9
-  "disable loading perforce in tier
-  if !exists("$TIER")
-      let loaded_perforce=1
-  endif
-else
-  set guifont=Inconsolata\ for\ Powerline:h16
-  " supress loading of perforce plugin
-  let loaded_perforce=1
-endif
+set guifont=Inconsolata\ for\ Powerline:h16
+" supress loading of perforce plugin
 
 let g:Powerline_symbols="fancy"
 
