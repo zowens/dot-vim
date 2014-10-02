@@ -91,3 +91,6 @@
 [submodule "bundle/jedi-vim"]
 	path = bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "bundle/vim-yaml"]
+	path = bundle/vim-yaml
+	url = git@github.com:avakhov/vim-yaml.git
