@@ -215,3 +215,6 @@ au FileType go nmap <Leader>s <Plug>(go-implements)
 " ---------------------------------------
 
 autocmd FileType java setlocal omnifunc=eclim#complete
+
+set hidden
+let g:racer_cmd = "/Users/zack/src/github.com/phildawes/racer/target/racer" 
