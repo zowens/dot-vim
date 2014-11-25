@@ -138,7 +138,7 @@ else
     let g:neocomplete#enable_at_startup = 0
 endif
 
-"neco ghc
+""neco ghc
 let g:necoghc_enable_detailed_browse = 1
 
 
@@ -218,3 +218,5 @@ autocmd FileType java setlocal omnifunc=eclim#complete
 
 set hidden
 let g:racer_cmd = "/Users/zack/src/github.com/phildawes/racer/target/racer" 
+autocmd FileType rust NeoCompleteLock
+let g:racer_experimental_completer = 1
