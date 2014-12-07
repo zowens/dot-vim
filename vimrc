@@ -220,3 +220,4 @@ autocmd FileType java setlocal omnifunc=eclim#complete
 autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 tabstop=2 noexpandtab
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 let coffee_compiler = '/Users/zack/src/nvm/v0.10.33/bin/coffee'
+autocmd BufWrite *.rs :silent !rusty-tags &
