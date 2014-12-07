@@ -216,11 +216,6 @@ au FileType go nmap <Leader>s <Plug>(go-implements)
 
 autocmd FileType java setlocal omnifunc=eclim#complete
 
-set hidden
-let g:racer_cmd = "/Users/zack/src/github.com/phildawes/racer/target/racer" 
-autocmd FileType rust NeoCompleteLock
-let g:racer_experimental_completer = 1
-
 "  Coffeescript
 autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 tabstop=2 noexpandtab
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
