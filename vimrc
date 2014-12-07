@@ -42,7 +42,7 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', 'node_modules', 'dist', 'target']
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', 'node_modules', 'dist', 'target', '*\.js','*\.map','*.js\.map']
 
 " turn off backup files
 set nobackup
@@ -222,5 +222,6 @@ autocmd FileType rust NeoCompleteLock
 let g:racer_experimental_completer = 1
 
 "  Coffeescript
-autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 tabstop=2 noexpandtab
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+let coffee_compiler = '/Users/zack/src/nvm/v0.10.33/bin/coffee'
