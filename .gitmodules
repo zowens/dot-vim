@@ -49,9 +49,6 @@
 [submodule "bundle/ghcmod-vim"]
 	path = bundle/ghcmod-vim
 	url = git://github.com/eagletmt/ghcmod-vim.git
-[submodule "bundle/tabular"]
-	path = bundle/tabular
-	url = git://github.com/godlygeek/tabular.git
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
