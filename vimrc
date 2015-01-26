@@ -70,8 +70,6 @@ autocmd FilterReadPost * :set number
 autocmd FileReadPost * :set number
 " Go fmt - fail silently
 let g:go_fmt_fail_silently = 1
-let g:go_fmt_command = "goimports"
-
 
 
 "" fold javadoc
@@ -82,6 +80,7 @@ autocmd FileType javascript :set fmr=/*,*/ fdm=marker fdc=1
 autocmd FileType cpp :set fmr=/**,*/ fdm=marker fdc=1
 autocmd FileType c :set fmr=/**,*/ fdm=marker fdc=1
 autocmd Syntax go normal zR
+autocmd Syntax scala normal zR
 
 " complete options (disable preview scratch window)
 set completeopt=menu,menuone,longest
