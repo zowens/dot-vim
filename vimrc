@@ -17,7 +17,7 @@ syntax on
 " UTF-8 always
 set encoding=utf-8
 
-colorscheme solarized
+colorscheme abra
 set background=dark
 set listchars=tab:▸\ ,eol:¬
 
