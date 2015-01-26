@@ -91,3 +91,6 @@
 [submodule "bundle/didyoumean"]
 	path = bundle/didyoumean
     url = git@github.com:EinfachToll/DidYouMean.git
+[submodule "bundle/vim-abra"]
+    path = bundle/vim-abra
+    url = git@github.com:abra/vim-abra.git
