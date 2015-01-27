@@ -122,9 +122,6 @@ else
     let g:neocomplete#enable_at_startup = 0
 endif
 
-" don't ask for reload of localvimrc
-let g:localvimrc_ask=0
-
 " ---------------------------------------
 "  Key mappings / Language-Specific Items
 " ---------------------------------------
