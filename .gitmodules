@@ -52,9 +52,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
-[submodule "utils/consolas-powerline-vim"]
-	path = utils/consolas-powerline-vim
-	url = git@github.com:eugeneching/consolas-powerline-vim.git
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
 	url = git://github.com/Lokaltog/vim-easymotion.git
