@@ -17,18 +17,20 @@ syntax on
 " UTF-8 always
 set encoding=utf-8
 
+" Colors/Fonts
 colorscheme abra
 set background=dark
+if $TERM == "xterm"
+    set t_Co=256
+endif
+let g:Powerline_symbols="fancy"
+
 set listchars=tab:▸\ ,eol:¬
 
 set guifont=Inconsolata\ for\ Powerline:h16
-" supress loading of perforce plugin
-
-let g:Powerline_symbols="fancy"
 
 " exclusively use VIM settings (not VI settings)
 set nocompatible
-
 set laststatus=2
 
 "allow backspacing
@@ -63,13 +65,10 @@ endfunc
 
 :au FocusLost * :set number
 autocmd InsertEnter * :set number
-" automaticall set absolute line numbers when opening a document
 autocmd BufNewFile * :set number
 autocmd BufReadPost * :set number
 autocmd FilterReadPost * :set number
 autocmd FileReadPost * :set number
-" Go fmt - fail silently
-let g:go_fmt_fail_silently = 1
 
 
 "" fold javadoc
@@ -86,7 +85,7 @@ autocmd Syntax scala normal zR
 set completeopt=menu,menuone,longest
 
 " limit complete popup height
-set pumheight=15
+set pumheight=10
 
 " auto read when file changed elsewhere
 set autoread
@@ -126,9 +125,6 @@ let g:airline_enable_syntastic=1
 let g:airline_powerline_fonts = 1
 
 " if it's in an xterm window, use 256 colors
-if $TERM == "xterm"
-    set t_Co=256
-endif
 
 " start neocomplete at startup
 if has("lua")
@@ -190,15 +186,18 @@ map <leader>pp :setlocal paste!<cr>
 " retab
 nmap <silent> <leader>rt :retab!<cr>
 
-map <silent> <leader>ji :JavaImportOrganize<cr>
-map <silent> <leader>jm :JavaImpl<cr>
-map <silent> <leader>js :JavaSearch<cr>
-map <silent> <leader>jd :JavaDocSearch<cr>
-map <silent> <leader>jc :JavaDocComment<cr>
-map <silent> <leader>jk :JavaCorrect<cr>
-map <silent> <leader>ju :JavaDelegate<cr>
-map <silent> <leader>jg :JavaGetSet<cr>
+" java
+au FileType java map <silent> <leader>ji :JavaImportOrganize<cr>
+au FileType java map <silent> <leader>jm :JavaImpl<cr>
+au FileType java map <silent> <leader>js :JavaSearch<cr>
+au FileType java map <silent> <leader>jd :JavaDocSearch<cr>
+au FileType java map <silent> <leader>jc :JavaDocComment<cr>
+au FileType java map <silent> <leader>jk :JavaCorrect<cr>
+au FileType java map <silent> <leader>ju :JavaDelegate<cr>
+au FileType java map <silent> <leader>jg :JavaGetSet<cr>
+autocmd FileType java setlocal omnifunc=eclim#complete
 
+" go
 au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <Leader>f <Plug>(go-fmt)
 au FileType go nmap <Leader>gd <Plug>(go-doc)
@@ -210,13 +209,4 @@ au FileType go nmap gd <Plug>(go-def)
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>s <Plug>(go-implements)
-
-" ---------------------------------------
-
-autocmd FileType java setlocal omnifunc=eclim#complete
-
-"  Coffeescript
-autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 tabstop=2 noexpandtab
-autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
-let coffee_compiler = '/Users/zack/src/nvm/v0.10.33/bin/coffee'
-autocmd BufWrite *.rs :silent !rusty-tags &
+let g:go_fmt_fail_silently = 1
