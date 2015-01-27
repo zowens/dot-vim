@@ -1,8 +1,14 @@
 filetype off
-" standard pathogen stuff
+
+" ---------------------------------------
+"  Pathogen
+" ---------------------------------------
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
+" ---------------------------------------
+" Formatting
+" ---------------------------------------
 " standard vim editing config, 4 space tabs
 set hidden
 set number
@@ -11,6 +17,12 @@ set smarttab
 set shiftwidth=4
 set autoindent
 set expandtab
+
+" smart indent
+set ai
+set si
+
+set spelllang=en_us
 
 syntax on
 
@@ -23,11 +35,10 @@ set background=dark
 if $TERM == "xterm"
     set t_Co=256
 endif
+set guifont=Inconsolata\ for\ Powerline:h16
 let g:Powerline_symbols="fancy"
 
 set listchars=tab:▸\ ,eol:¬
-
-set guifont=Inconsolata\ for\ Powerline:h16
 
 " exclusively use VIM settings (not VI settings)
 set nocompatible
@@ -36,7 +47,6 @@ set laststatus=2
 "allow backspacing
 set backspace=indent,eol,start
 set whichwrap+=<,>,h,l
-
 set nowrap
 set softtabstop=4
 
@@ -44,17 +54,18 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
+" ---------------------------------------
+" Filetypes
+" ---------------------------------------
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', 'node_modules', 'dist', 'target', '*\.js','*\.map','*.js\.map']
+set wildignore=*.o,*~,*.hi,*.zip,*.so
 
 " turn off backup files
 set nobackup
 set nowb
 set noswapfile
 
-"" don't ask for reload of localvimrc
-let g:localvimrc_ask=0
-
-"" function to toggle numbering between absolute and relative
+" function to toggle numbering between absolute and relative
 function! NumberToggle()
   if(&relativenumber == 1)
     set number
@@ -70,39 +81,20 @@ autocmd BufReadPost * :set number
 autocmd FilterReadPost * :set number
 autocmd FileReadPost * :set number
 
-
-"" fold javadoc
 set foldmethod=syntax
 set foldenable
-autocmd FileType java :set fmr=/**,*/ fdm=marker fdc=1
-autocmd FileType javascript :set fmr=/*,*/ fdm=marker fdc=1
-autocmd FileType cpp :set fmr=/**,*/ fdm=marker fdc=1
-autocmd FileType c :set fmr=/**,*/ fdm=marker fdc=1
-autocmd Syntax go normal zR
-autocmd Syntax scala normal zR
 
-" complete options (disable preview scratch window)
-set completeopt=menu,menuone,longest
+set completeopt=menu,menuone,longest " complete options (disable preview scratch window)
 
-" limit complete popup height
-set pumheight=10
-
-" auto read when file changed elsewhere
-set autoread
-
-" ignore compiled files
-set wildignore=*.o,*~,*.hi,*.zip,*.so
-
-" always show location
-set ruler
+set pumheight=10 " limit complete popup height
+set autoread " auto read when file changed elsewhere
+set ruler " always show location
 
 " ignore case when searching, but be smart about it
 set ignorecase
 set smartcase
 
-" don't redraw while executing macros
-set lazyredraw
-
+set lazyredraw " don't redraw while executing macros
 set showmatch
 
 " disable annoying sounds
@@ -111,20 +103,17 @@ set novisualbell
 set t_vb=
 set tm=1000 " timeout to 1 second
 
-" smart indent
-set ai
-set si
-
+" supertab
 let g:SuperTabDefaultCompletionType = "context"
 
+" ctrl-p
+let g:ctrlp_map = '<c-t>'
 let g:ctrlp_custom_ignore = '\v[\/]((\.(git|hg|svn))|node_modules|dist|target)$'
 let g:ctrlp_working_path_mode = 0
 
 " airline configuration
 let g:airline_enable_syntastic=1
 let g:airline_powerline_fonts = 1
-
-" if it's in an xterm window, use 256 colors
 
 " start neocomplete at startup
 if has("lua")
@@ -133,17 +122,12 @@ else
     let g:neocomplete#enable_at_startup = 0
 endif
 
-""neco ghc
-let g:necoghc_enable_detailed_browse = 1
-
-
-" ECLIM settings
-let g:EclimBrowser = 'open'
+" don't ask for reload of localvimrc
+let g:localvimrc_ask=0
 
 " ---------------------------------------
-"  Key mappings
+"  Key mappings / Language-Specific Items
 " ---------------------------------------
-let g:ctrlp_map = '<c-t>'
 " Making it so ; works like : for commands. Saves typing and eliminates :W style typos due to lazy holding shift.
 nnoremap ; :
 "" bind F2 to toggle
@@ -158,7 +142,6 @@ nmap <silent> <F8> :TagbarToggle<CR>
 nmap <silent> <leader>nt :NERDTreeToggle<CR>
 " Toggle spelling with \ss
 nmap <silent> <leader>ss :setlocal spell!<CR>
-set spelllang=en_us
 
 " spelling shortcuts
 map <leader>sn ]s
@@ -196,6 +179,14 @@ au FileType java map <silent> <leader>jk :JavaCorrect<cr>
 au FileType java map <silent> <leader>ju :JavaDelegate<cr>
 au FileType java map <silent> <leader>jg :JavaGetSet<cr>
 autocmd FileType java setlocal omnifunc=eclim#complete
+let g:EclimBrowser = 'open'
+
+autocmd FileType java :set fmr=/**,*/ fdm=marker fdc=1
+autocmd FileType javascript :set fmr=/*,*/ fdm=marker fdc=1
+autocmd FileType cpp :set fmr=/**,*/ fdm=marker fdc=1
+autocmd FileType c :set fmr=/**,*/ fdm=marker fdc=1
+autocmd Syntax go normal zR
+autocmd Syntax scala normal zR
 
 " go
 au FileType go nmap <Leader>i <Plug>(go-info)
@@ -218,3 +209,4 @@ au FileType haskell map <leader>ge :GhcModExpand<cr>
 au FileType haskell map <leader>gk :GhcModCheck<cr>
 au FileType haskell map <leader>gl :GhcModLint<cr>
 au FileType haskell map <Leader>gc :GhcModTypeClear<cr>
+let g:necoghc_enable_detailed_browse = 1
