@@ -210,3 +210,11 @@ au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>s <Plug>(go-implements)
 let g:go_fmt_fail_silently = 1
+
+" haskell
+au FileType haskell map <leader>gt :GhcModType<cr>
+au FileType haskell map <leader>gi :GhcModInfo<cr>
+au FileType haskell map <leader>ge :GhcModExpand<cr>
+au FileType haskell map <leader>gk :GhcModCheck<cr>
+au FileType haskell map <leader>gl :GhcModLint<cr>
+au FileType haskell map <Leader>gc :GhcModTypeClear<cr>
