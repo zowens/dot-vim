@@ -1,12 +1,3 @@
-support_src/*
-bundle/haskellmode-vim/tags
 .netrwhist
-bundle/perforce.vim
-bundle/perforce
-bundle/scoped_tags
-bundle/vim-css3
-bundle/vimless
 bundle/*/doc/**
-bundle/xml/doc/tags
-bundle/xml/doc/xml-plugin.txt
 doc
