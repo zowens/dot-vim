@@ -9,3 +9,4 @@ bundle/vimless
 bundle/*/doc/**
 bundle/xml/doc/tags
 bundle/xml/doc/xml-plugin.txt
+doc
