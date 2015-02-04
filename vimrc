@@ -207,3 +207,8 @@ au FileType haskell map <leader>gk :GhcModCheck<cr>
 au FileType haskell map <leader>gl :GhcModLint<cr>
 au FileType haskell map <Leader>gc :GhcModTypeClear<cr>
 let g:necoghc_enable_detailed_browse = 1
+
+" rust
+let g:racer_cmd = "/Users/zack/bin/racer"
+let $RUST_SRC_PATH="/Users/zack/src/github.com/rust-lang/rust/src/"
+let g:racer_experimental_completer = 1
